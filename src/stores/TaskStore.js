@@ -22,7 +22,7 @@ export const useTaskStore = defineStore("taskStore", {
   },
   actions: {
     async getTask() {
-      const res = await fetch("http://localhost:3000/tasks");
+      const res = await fetch("https://pinia-app-sigma.vercel.app");
       const data = await res.json();
       this.tasks = data;
       this.loading = false;
@@ -31,7 +31,7 @@ export const useTaskStore = defineStore("taskStore", {
     async addTask(task) {
       this.tasks.push(task);
 
-      const res = await fetch("http://localhost:3000/tasks", {
+      const res = await fetch("https://pinia-app-sigma.vercel.app", {
         method: "POST",
         body: JSON.stringify(task),
         headers: { "Content-Type": "application/json" },
@@ -46,7 +46,7 @@ export const useTaskStore = defineStore("taskStore", {
         return t.id !== id;
       });
 
-      const res = await fetch("http://localhost:3000/tasks/" + id, {
+      const res = await fetch("https://pinia-app-sigma.vercel.app/" + id, {
         method: "DELETE",
       });
 
@@ -58,7 +58,7 @@ export const useTaskStore = defineStore("taskStore", {
       const task = this.tasks.find((t) => t.id === id);
       task.isFav = !task.isFav;
 
-      const res = await fetch("http://localhost:3000/tasks/" + id, {
+      const res = await fetch("https://pinia-app-sigma.vercel.app/" + id, {
         method: "PATCH",
         body: JSON.stringify({ isFav: task.isFav }),
         headers: { "Content-Type": "application/json" },
