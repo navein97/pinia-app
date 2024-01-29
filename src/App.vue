@@ -3,7 +3,7 @@
     <!-- heading -->
     <header>
       <img src="./assets/pinia-logo.svg" alt="pinia logo" />
-      <h1>Poinabel</h1>
+      <h1>Pinia Tasks</h1>
       <!--{{ taskStore.name }} -->
     </header>
 
