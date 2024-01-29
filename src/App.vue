@@ -51,6 +51,7 @@
 
 <script>
 import { ref } from "vue";
+import "./firebase";
 import TaskDetails from "./components/TaskDetails.vue";
 import { useTaskStore } from "./stores/TaskStore";
 import TaskForm from "./components/TaskForm.vue";

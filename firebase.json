@@ -1,0 +1,6 @@
+{
+  "firebase": "pinia-app-72cd1",
+  "database": {
+    "rules": "db.json"
+  }
+}

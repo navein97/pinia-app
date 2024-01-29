@@ -1,13 +1,33 @@
 {
+  "rules": {
+    ".read": false,
+    ".write": false
+  },
+
   "tasks": [
     {
-      "id": "1",
-      "title": "Eat porridge",
-      "isFav": true
+      "id": 9106,
+      "title": "ascacs",
+      "isFav": false
     },
     {
-      "id": "2",
-      "title": "Buy Milk",
+      "id": 2412,
+      "title": "sdfdsf",
+      "isFav": false
+    },
+    {
+      "id": 9759,
+      "title": "sdfsdf",
+      "isFav": false
+    },
+    {
+      "id": 3578,
+      "title": "sdf",
+      "isFav": false
+    },
+    {
+      "id": 6155,
+      "title": "HIII",
       "isFav": false
     }
   ]
