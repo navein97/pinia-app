@@ -22,7 +22,7 @@ export const useTaskStore = defineStore("taskStore", {
   },
   actions: {
     async getTask() {
-      const res = await fetch("./data/db.json/tasks");
+      const res = await fetch("https://pinia-app-sigma.vercel.app/tasks");
       const data = await res.json();
       this.tasks = data;
       this.loading = false;
@@ -31,7 +31,7 @@ export const useTaskStore = defineStore("taskStore", {
     async addTask(task) {
       this.tasks.push(task);
 
-      const res = await fetch("./data/db.json/tasks", {
+      const res = await fetch("https://pinia-app-sigma.vercel.app/tasks", {
         method: "POST",
         body: JSON.stringify(task),
         headers: { "Content-Type": "application/json" },
