@@ -22,7 +22,7 @@ export const useTaskStore = defineStore("taskStore", {
   },
   actions: {
     async getTask() {
-      const res = await fetch("http://localhost:3000/tasks");
+      const res = await fetch("./data/db.json/tasks");
       const data = await res.json();
       this.tasks = data;
       this.loading = false;
