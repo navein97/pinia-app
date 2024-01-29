@@ -1,6 +1,5 @@
 import { createPinia } from "pinia";
 import "./assets/main.css";
-Vue.config.devtools = true;
 import { createApp } from "vue";
 import App from "./App.vue";
 
