@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "json-server --watch db.json --port 3000",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
