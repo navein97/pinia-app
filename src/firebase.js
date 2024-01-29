@@ -9,6 +9,7 @@ import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyC4Xp6OZpT-GesbiJEDKFVnqhdRudhvN_g",
   authDomain: "pinia-app-72cd1.firebaseapp.com",
+  databaseURL: "https://pinia-app-72cd1-default-rtdb.firebaseio.com",
   projectId: "pinia-app-72cd1",
   storageBucket: "pinia-app-72cd1.appspot.com",
   messagingSenderId: "173248412360",
