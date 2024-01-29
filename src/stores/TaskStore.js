@@ -22,20 +22,23 @@ export const useTaskStore = defineStore("taskStore", {
   },
   actions: {
     async getTask() {
-      const res = await fetch("./data/db.json/tasks");
+      const res = await fetch("http://localhost:3000/tasks");
       const data = await res.json();
       this.tasks = data;
       this.loading = false;
+      console.log(res.data);
     },
 
     async addTask(task) {
       this.tasks.push(task);
 
-      const res = await fetch("./data/db.json/tasks", {
+      const res = await fetch("http://localhost:3000/tasks", {
         method: "POST",
         body: JSON.stringify(task),
         headers: { "Content-Type": "application/json" },
       });
+
+      console.log(res.data);
 
       if (res.error) {
         console.log(res.error);
@@ -49,6 +52,8 @@ export const useTaskStore = defineStore("taskStore", {
       const res = await fetch("http://localhost:3000/tasks/" + id, {
         method: "DELETE",
       });
+
+      console.log(res.data);
 
       if (res.error) {
         console.log(res.error);
